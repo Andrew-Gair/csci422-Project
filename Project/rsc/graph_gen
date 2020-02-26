@@ -1,0 +1,42 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $n;
+my $interval;
+my $coinflip;
+
+#print "How many elements: ";
+$n = <STDIN>;
+
+#print "Enter a number from 2 to  ", $n, " (random interval to next cover):";
+$interval= <STDIN>;
+
+
+print $n, "\n";
+
+#my $j;
+#for (my $i=0; $i <$n;  $i++) {
+#   $j = $i + 1 + int(rand($interval));
+#   print $i, " ";
+#   while ($j<= $n-1) {
+#      print $j, " ";
+#      $j = $j + 1 + int(rand($interval));
+#   }
+#   print $n;
+#}
+#print $n, "\n";
+
+
+
+my $j;
+for (my $i=0; $i <$n;  $i++) { # for each element
+   $j = 1 + int(rand($interval)); # set an initial neighbour value
+   print $i, " "; # print source node
+   while ($j<= $n-1) { # while j is less than $n
+      print $j, " "; # will print neighbours
+      $j = $j + 1 + int(rand($interval)); # increment j by a random interval
+   }
+   print $n; # print end of line notification
+}
+print $n, "\n"; # print end of file notification

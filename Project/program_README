@@ -1,0 +1,52 @@
+README for how to operate the program
+Andrew Gair, csci422 Project
+
+
+--------------INPUT
+The program takes a file from rsc directory as input
+Files must follow this format:
+D or U to signify directed or undirected graph
+number of nodes total (n)
+list of nodes and their neighbours
+  each line is terminated with n
+  the file itself is terminated with n
+NOTE: you should supply each node, even if it
+has no neighbours, simply terminate the line after
+naming the node with the line termination character n.
+IE:
+D
+2
+0 1 2
+1 2
+2
+
+Means that 1 has no neighbours, while 0 has 1 as a neighbour.
+
+See rsc folder for several examples and testcases.
+
+
+--------------COMPILE
+Compile the program through the makefile
+Typing "make" will compile the whole program.
+Necessary files are stored in hdr and src.
+The executable is called "project" and is placed
+at this top level directory.
+
+
+--------------RUNNING
+Run the code with "./project rsc/filename"
+The program will output the original graph and determine
+if there are any cycles. It will then modify the graph
+by removing nodes of degree 2 (if possible) and display
+the resulting graph through the terminal window.
+
+
+--------------FLAGS
+You can see a more in depth version of how the code runs
+by supplying a third command-line-arguement.
+(this arguement is arbitrary, just the presence of a third
+character is enough to trigger this in depth display).
+IE: "./project rsc/filename set"
+
+
+
